@@ -1,7 +1,9 @@
-name: armTemplateDeployment111
+name: MITT ARM Deplyment Demo Version 1.0.0.0
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - "main"
 
 jobs:
   armDeploy:
