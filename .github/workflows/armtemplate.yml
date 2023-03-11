@@ -25,6 +25,10 @@ jobs:
           inlineScript: |
             az account list -o table
 
-      - name: Create Resource group
+      - name: Check Resource group Information
         run: |
           az group list -o table
+
+      - name: Create Vnet 
+        run: |
+          az network vnet create --name MITT-github --resource-group github-rg --subnet-name default
