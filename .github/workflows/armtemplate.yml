@@ -27,4 +27,4 @@ jobs:
 
       - name: Create Resource group
         run: |
-          az group create --name github-MITT --location eastus
+          az group list -o table
