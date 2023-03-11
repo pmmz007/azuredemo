@@ -23,4 +23,8 @@ jobs:
         uses: Azure/cli@v1.0.7
         with:
           inlineScript: |
-            az group create --name github-demo-MITT --location westus
+            az account list -o table
+
+      - name: Create Resource group
+        run: |
+          az group create --name github-MITT --location eastus
