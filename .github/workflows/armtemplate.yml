@@ -1,7 +1,7 @@
 name: MITT ARM Deplyment Demo Version 1.0.0.0
 
 on:
-  push:
+  push: #it will push to main branches and run the workflow automatically
     branches:
       - "main"
 
