@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: check code on github repository
+      - name: check code on github repository checking
         uses: actions/checkout@v2
 
       - name: Azure Login
