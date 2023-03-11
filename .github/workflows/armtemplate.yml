@@ -1,21 +1,16 @@
+name: armTemplateDeployment
 
-# File: .github/workflows/workflow.yml
-
-on: [push]
-
-name: AzureLoginSample
+on:
+  workflow_dispatch:
 
 jobs:
-
-  build-and-deploy:
+  armDeploy:
     runs-on: ubuntu-latest
-    steps:
-    
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-    - run: |
-        az webapp list --query "[?state=='Running']"
 
-        
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
