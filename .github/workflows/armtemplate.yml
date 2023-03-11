@@ -32,3 +32,7 @@ jobs:
       - name: Create Vnet 
         run: |
           az network vnet create --name MITT-github --resource-group github-rg --subnet-name default
+
+      - name: Create Demo VM
+        run: |
+          az vm create --resource-group github-rg --name MyVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --vnet-name MITT-github --subnet default --size Standard_B1s --os-disk-name MyOsDisk --os-disk-size-gb 30 --data-disk-sizes-gb 50
