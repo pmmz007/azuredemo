@@ -1,4 +1,4 @@
-name: Azure Login testing workflow
+
 
 on: [push]
 
